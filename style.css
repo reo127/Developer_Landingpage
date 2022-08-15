@@ -7,6 +7,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -81,7 +85,7 @@ nav {
   transition: .3s ease;
 }
 
-.company-items:hover{
+.company-items:hover {
   color: #3944F7;
 }
 
@@ -140,10 +144,17 @@ nav {
 .blog-card {
   display: flex;
   box-shadow: 0px 0px 9px 0px black;
-  border-radius: 54px 10px 15px 15px;
+  border-radius: 84px 15px 15px 21px;
 }
 
-.blog-image {}
+.blog-image {
+  width: 100%;
+}
+
+.blog-image > img {
+  width: 100%;
+  height: 100%;
+}
 
 .blog-content {
   padding: 1rem 3rem;
@@ -212,6 +223,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 3rem 5rem;
+  flex-wrap: wrap;
 }
 
 .download-content>h1 {
@@ -254,6 +266,7 @@ nav {
   justify-content: space-between;
   padding: 1rem 3rem;
   background-color: #3944F7;
+  flex-wrap: wrap;
 }
 
 .list {
@@ -261,6 +274,7 @@ nav {
   align-items: center;
   color: #fff;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .list-items {
@@ -268,7 +282,7 @@ nav {
   cursor: pointer;
 }
 
-.footer-logos{ 
+.footer-logos {
   margin: 0rem 1rem;
   cursor: pointer;
 }
@@ -277,4 +291,130 @@ nav {
   display: flex;
   align-items: center;
   color: #fff;
+}
+
+
+@media screen and (max-width: 1592px) {
+  .header-image {
+    display: none;
+  }
+
+  .header-text {
+    margin-top: 8rem;
+    margin-left: 0rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  header {
+    height: auto;
+    padding: 2rem 2rem;
+  }
+
+  nav {
+    width: inherit;
+  }
+
+  .blog-card{
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width:859px) {
+  nav {
+    position: absolute;
+    top: 7rem;
+    width: 100%;
+  }
+
+  header {
+    padding: 2rem 0rem;
+  }
+  .nav-item {
+    padding: 1rem .5rem;
+}
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.company-items{
+  margin-top: 1rem;
+}
+
+
+/* ================== API Section ===================== */
+
+.card{
+  margin-top: 3rem;
+}
+
+
+/* ================== Blogs Section ===================== */
+.blog-card {
+  display: flex;
+  box-shadow: 0px 0px 9px 0px black;
+  border-radius: 54px 10px 15px 15px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.blog-cards {
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+
+.blog-heading {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+/* ================== FAQ Section ===================== */
+.faq-image {
+  margin-right: 13rem;
+  display: none;
+}
+
+.faq-section {
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+.faq-content {
+  padding: 0rem 1rem;
+}
+
+/* ================== Download Section ===================== */
+.download-section {
+  justify-content: center;
+  padding: 3rem 0rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.download-email>form>input {
+  margin-left: 0rem;
+}
+
+.submit-from {
+  max-width: 20rem;
+  text-align: center;
+  height: 3rem;
+}
+
+.download-email>form>button{
+  margin-top: 2rem;
+}
+
+
+/* ================== Footer Section ===================== */
+
+.footer-logos {
+  margin: 1rem 1rem;
+}
+
+
 }
